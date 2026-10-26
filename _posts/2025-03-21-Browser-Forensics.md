@@ -20,7 +20,7 @@ given a `browser.sqlite` file, answer the following questions:
 
 before getting too deep into `sqlite3`, lets see if we can `strings | grep` and answer some of these questions. First, let's try:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `strings browser.sqlite|grep 'craigslist'`
@@ -39,7 +39,7 @@ looks good.
 
 for the second question, let's continue our grepping skills, this time using a `strings|grep|grep` combo again.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `strings browser.sqlite|grep 'bitcoin'|grep '\$'` --being sure to escape the `$` with a `\`.
@@ -52,7 +52,7 @@ there we go!
 
 For the 3rd question, let's just look at all the `https` entries and see what we can see:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `strings browser.sqlite|grep 'https'`
@@ -67,7 +67,7 @@ we're doing great so far, and haven't even needed `sqlite3` just yet. amazing!
 
 looking further through our current results, we see some hits for `mail.google.com`, so let's grep for `gmail.com` and see what we get:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `strings browser.sqlite|grep 'https'|grep 'gmail'`
@@ -81,7 +81,7 @@ ok looks good.
 
 keeping this trend going, let's answer the next question by `grep 'transaction'`:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `strings browser.sqlite|grep 'transactions'`
@@ -95,7 +95,7 @@ Nice.
 
 for the next question, let's finally utilize `sqlite3` and start poking around some tables.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `sqlite3 browser.sqlite`
@@ -184,7 +184,7 @@ using notepad to clean them up b/c i'm slightly irked by this whole thing now lo
 
 and loading anyone of these into a web browser produces a page like this:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -205,7 +205,7 @@ phew! man Question 6 was a wild ride! but now that we got through it, Question 7
 
 all we need to do is look at the "To:" column and copy/paste the correct address into the answer field.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
