@@ -3,7 +3,7 @@ layout: post
 title: "SANS 2024 Holiday Hack Challenge"
 author: "rundas-r00t"
 date: 2024-11-23 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 SANS Holiday Hack Challenge 2024 - Prologue
