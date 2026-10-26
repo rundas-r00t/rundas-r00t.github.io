@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Poking Around On An Hp Laserjet 4001Dn"
+title: "Poking Around On An HP Laserjet 4001dn"
+author: "rundas-r00t"
 date: 2026-09-30 12:00:00 -0000
 categories: ctf writeups
 ---
