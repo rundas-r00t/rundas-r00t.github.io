@@ -20,7 +20,7 @@ it seems pretty straight forward enough.. the manual above gives you some clues 
 between these two pieces of info, and a little experimentation with the wires and the 3v/5v toggle, you can easily get silver by...
 
 
-<details>
+<details markdown="1>
   <summary>Spoiler Alert</summary>
    swapping the connections for TX,T,RX,R (TX<->R and RX<->T), as these pins are swapped on the motherboard you're hooking into.
 
@@ -70,7 +70,7 @@ heading back to the Network tab, selecting the Silver 200-Success message, and c
 what if we 
 
 
-<details>
+<details markdown="1>
   <summary>Spoiler Alert</summary>
    change that `.com/api/v2/complete` to `/v2/complete` ? ..could it be that easy?
 </details>
@@ -95,7 +95,7 @@ lesson learned from this is always read with a critical eye and don't assume tha
 
 
 
-<details>
+<details markdown="1>
   <summary>Spoiler Alert</summary>
    YES! AMAZING! 
 
