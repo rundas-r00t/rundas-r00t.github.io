@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Completed Elf Minder 9000 And Curling Is Fun Challenges"
+title: "Completed 'Elf Minder 9000' and 'Curling Is Fun' Challenges"
 date: 2024-12-08 12:00:00 -0000
 categories: ctf writeups
 ---
