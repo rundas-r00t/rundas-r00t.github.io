@@ -3,7 +3,7 @@ layout: post
 title: "SANS Holiday Hack Challenge: Frosty Keypad"
 author: "rundas-r00t"
 date: 2025-01-05 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 [https://rumble.com/v667ir7-sans-holiday-hack-episode-7.html](https://rumble.com/v667ir7-sans-holiday-hack-episode-7.html)
