@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cyberskyline Log Analysis (part 1)"
+author: "rundas-r00t"
 date: 2025-03-20 12:00:00 -0000
 categories: ctf writeups
 ---
