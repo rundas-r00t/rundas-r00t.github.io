@@ -3,7 +3,7 @@ layout: post
 title: "PicoCTF Cracking!"
 author: "rundas-r00t"
 date: 2025-02-23 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 # Password Cracking
