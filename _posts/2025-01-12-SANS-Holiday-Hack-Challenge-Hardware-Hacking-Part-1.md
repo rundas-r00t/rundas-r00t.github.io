@@ -3,7 +3,7 @@ layout: post
 title: "SANS Holiday Hack Challenge: Hardware Hacking Part 1"
 author: "rundas-r00t"
 date: 2025-01-12 12:00:00 -0000
-categories: ctf writeups
+categories: "ctf writeups"
 ---
 
 video here: [https://rumble.com/v68kyw1-sans-holiday-hack-episode-8.html](https://rumble.com/v68kyw1-sans-holiday-hack-episode-8.html)
