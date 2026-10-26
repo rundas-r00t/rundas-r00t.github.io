@@ -59,7 +59,11 @@ This is the message sent to the server `https://hhc24-hardwarehacking.holidayhac
 ![image](https://github.com/user-attachments/assets/913a5211-1add-4ca6-86a5-78dc63fa4228)
 
 
-!!!!! there are two versions of the game! /api/v1 and /api/v2  ...the comments imply that v1 is vulnerable to brute-forcing, but obviously we're not dealing with password attacks here. but what if we  <details> <summary>Spoiler Alert</summary>edit the HTTP header to send the data to the v1 server?</details> let's try it out. 
+!!!!! there are two versions of the game! /api/v1 and /api/v2  ...the comments imply that v1 is vulnerable to brute-forcing, but obviously we're not dealing with password attacks here. but what if we  
+
+<details markdown="1">
+  <summary>Spoiler Alert</summary>
+  edit the HTTP header to send the data to the v1 server?</details> let's try it out. 
 
 heading back to the Network tab, selecting the Silver 200-Success message, and clicking the Resend button on the right allows us some editing options for the message:
 
