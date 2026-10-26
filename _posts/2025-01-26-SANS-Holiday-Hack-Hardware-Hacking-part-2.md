@@ -5,7 +5,7 @@ date: 2025-01-26 12:00:00 -0000
 categories: ctf writeups
 ---
 
-https://rumble.com/v6dsals-sans-holiday-hack-2024-episode-9.html and Episode 10.
+[https://rumble.com/v6dsals-sans-holiday-hack-2024-episode-9.html](https://rumble.com/v6dsals-sans-holiday-hack-2024-episode-9.html) and Episode 10.
 
 the challenge presents you with a linux terminal and a method to create new ID cards using the slh tool:
 
