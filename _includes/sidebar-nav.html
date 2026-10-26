@@ -9,13 +9,27 @@
   </div>
 
   <!-- 2. Main Page Navigation Tabs -->
-  <div class="navigation-tabs" style="margin-bottom: 25px; font-weight: bold; font-size: 0.95em;">
+  <!-- 2. Main Page Navigation Tabs (Terminal Edition) -->
+  <div class="navigation-tabs" style="margin-bottom: 25px; font-weight: bold; font-size: 0.95em; font-family: monospace;">
     <ul style="list-style: none; padding-left: 0; margin: 0;">
-      <li style="margin-bottom: 8px;"><a href="/" style="text-decoration: none;">🏠 HOME</a></li>
-      <li style="margin-bottom: 8px;"><a href="/categories.html" style="text-decoration: none;">📁 CATEGORIES</a></li>
-      <li style="margin-bottom: 8px;"><a href="/about.html" style="text-decoration: none;">ℹ️ ABOUT</a></li>
+      <li style="margin-bottom: 12px;">
+        <a href="/" style="text-decoration: none; color: #00ff00;">
+          <span style="color: #555;">$</span> ./home.sh
+        </a>
+      </li>
+      <li style="margin-bottom: 12px;">
+        <a href="/categories.html" style="text-decoration: none; color: #00ff00;">
+          <span style="color: #555;">$</span> ls -la /categories
+        </a>
+      </li>
+      <li style="margin-bottom: 12px;">
+        <a href="/about.html" style="text-decoration: none; color: #00ff00;">
+          <span style="color: #555;">$</span> cat about_me.md
+        </a>
+      </li>
     </ul>
   </div>
+
 
   <!-- 3. Blog Post List -->
   <h4 style="margin: 0 0 10px 0; color: #888; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px;">Recent Entries</h4>
