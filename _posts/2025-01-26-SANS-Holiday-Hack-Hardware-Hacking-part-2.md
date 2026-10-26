@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "SANS Holiday Hack Challenge: Hardware Hacking Part 2"
+author: "rundas-r00t"
 date: 2025-01-26 12:00:00 -0000
 categories: ctf writeups
 ---
