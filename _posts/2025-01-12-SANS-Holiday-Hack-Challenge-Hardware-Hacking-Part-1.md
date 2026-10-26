@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sans Holiday Hack Challenge Hardware Hacking Part 1"
+title: "SANS Holiday Hack Challenge: Hardware Hacking Part 1"
 date: 2025-01-12 12:00:00 -0000
 categories: ctf writeups
 ---
