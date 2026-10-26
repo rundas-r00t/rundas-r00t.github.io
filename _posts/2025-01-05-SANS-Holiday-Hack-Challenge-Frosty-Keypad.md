@@ -5,7 +5,7 @@ date: 2025-01-05 12:00:00 -0000
 categories: ctf writeups
 ---
 
-https://rumble.com/v667ir7-sans-holiday-hack-episode-7.html
+[https://rumble.com/v667ir7-sans-holiday-hack-episode-7.html](https://rumble.com/v667ir7-sans-holiday-hack-episode-7.html)
 
 on the last attempt at this challenge, I obtained Silver by punching in the proper digits that cooresponded to the fingerprints on the keys (visible after collecting the UV flashlight). Today, we're going for gold.
 
