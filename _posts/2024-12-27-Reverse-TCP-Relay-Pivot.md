@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reverse Tcp Relay Pivot"
+title: "Reverse TCP-Relay Pivot"
 date: 2024-12-27 12:00:00 -0000
 categories: ctf writeups
 ---
