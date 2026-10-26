@@ -3,7 +3,7 @@ layout: post
 title: "Completed 'Elf Minder 9000' and 'Curling Is Fun' Challenges"
 author: "rundas-r00t"
 date: 2024-12-08 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 video walkthrough here: [https://rumble.com/v5xchyt-rundas-gets-r00t.html](https://rumble.com/v5xchyt-rundas-gets-r00t.html)
