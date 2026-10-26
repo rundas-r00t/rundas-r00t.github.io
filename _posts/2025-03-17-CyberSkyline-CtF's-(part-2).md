@@ -20,7 +20,7 @@ Unfortunately, i could not get Volatility installed on my VM due to an error:
 
 After the stream had ended, I was able to fix this error by utilizing ChatGPT to help me troubleshoot and fix the issues. If you run into this error, here's how to get Volatility installed:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 first, create a virtual environment:  ` python3 -m venv venv-vol3       `
@@ -89,7 +89,7 @@ timestamp 00:44:53
 
 i took a moment to scan through the output to find a handful of Trojans from AndroidOS, as well as one line showing a MacOS. further guessing some strings/grep commands, i then tried 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ` strings memdump.mem | grep 'OS= ' 
@@ -98,7 +98,7 @@ i took a moment to scan through the output to find a handful of Trojans from And
 
 , which i guessed that the ` = ` would provide me with more solid info:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ![image](https://github.com/user-attachments/assets/32cc6694-6a00-4048-9512-22a4ed998eb2)
@@ -109,7 +109,7 @@ i took a moment to scan through the output to find a handful of Trojans from And
 As you can see, we have one line showing again and again and again. So i took a guess that this was the proper machine, and it was! hooray! one question down.
 
 continuing my ` strings|grep ` investigation, i then tried 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ` strings memdump.mem | grep 'NAME=' ` 
