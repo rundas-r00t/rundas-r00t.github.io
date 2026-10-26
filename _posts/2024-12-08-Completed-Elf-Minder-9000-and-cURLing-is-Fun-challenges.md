@@ -32,14 +32,14 @@ catting the file produces text:
 
 from here, i followed the instructions, using combined statements, such as:
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
   curl https://curlingfun:9090 -k -d "skip=bow" -b "end=10" --header "Hack:12ft"
 </details>
 
 then, to answer the 2nd question, repeat the same syntax from step 7 of the regular challenge
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
    curl https://curlingfun:9090/../../etc/button -k --path-as-is
 </details>
@@ -49,7 +49,7 @@ once succesful, the directions provide you with a secret URL
 finally, the third challenge utilizes the location switch to update the secret URL's landing page, granting you gold:
 
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
    curl https://curlingfun:9090/GoodSportsmanship -k -L
 </details>
