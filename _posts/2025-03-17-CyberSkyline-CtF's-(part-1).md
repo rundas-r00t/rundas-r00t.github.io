@@ -20,7 +20,7 @@ Download SuperAwesomeDoc.docx, and run exiftool to get some basic info about the
 Now, at this point, i'm supposed to know that 
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 the docx is actually a zip file?  ...apparently all docx files are actually zip files with xml content. this is how docx files are structured. a good thing to note and keep in mind for any future docx forensics.
@@ -37,7 +37,7 @@ Inside we see a series of images related to Halloween:
 I r-clicked-->save as for each image & ran exiftool on each, but this ended up being a dead end. Out of ideas, i had to check the walkthrough, which mentions the spoiler above and the nature of the docx file format.
 ..so now that we know a bit better how docx's are formed, we can 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 rename the file to a .zip extension and extract the data using `unzip` or r-click extract
 
@@ -46,7 +46,7 @@ rename the file to a .zip extension and extract the data using `unzip` or r-clic
 Now that we everything extracted, we have more files and folders to research. I then began opening the additional xml files to scan for anything new, which led me to see a few files named image1.png, image2.png, etc. I then noticed a `Media` folder, which i opened, and discovered it housed all the images, including a file that wasn't referenced in the XML:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 ![image](https://github.com/user-attachments/assets/459db64a-057f-4568-a99a-7ee65934e6d3)
 
