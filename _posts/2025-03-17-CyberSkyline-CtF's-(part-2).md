@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cyberskyline Ctf'S (Part 2)"
+title: "Cyberskyline CTF's (Part 2)"
 date: 2025-03-17 12:00:00 -0000
 categories: ctf writeups
 ---
