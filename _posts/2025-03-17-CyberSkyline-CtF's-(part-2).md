@@ -7,7 +7,9 @@ categories: ctf writeups
 
 # Memory Analysis with `cat`, `grep`, and `strings`
 
-https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html ~00:20:52 timestamp
+[https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html](https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html) 
+
+fast forward to ~00:20:52 timestamp
 
 
 The next Forensics challenge is named `The Book`, and it deals with using Volatility to parse a memory capture file.
