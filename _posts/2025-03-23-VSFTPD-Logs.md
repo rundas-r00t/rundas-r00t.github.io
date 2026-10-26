@@ -36,7 +36,7 @@ Question 1: what is the IP address that 'ftpuser' use to first log-in from?
 let's head and grep and see if we can easily answer this question:
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `head vsftpd.log | grep 'ftpuser'`
@@ -53,7 +53,7 @@ Question 2 is "what is the first directory that ftpuser created? well, we can cl
 Question 3 is What is the Last directory that ftpuser created? let's try `tail` and see what the bottom entry is:
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `tail -n50 | grep -i 'mkdir' vsftpd.log`
@@ -66,7 +66,7 @@ easy peasy.
 
 Question 4: what file extension was the most used by ftpuser? so basically we're needing to isolate file extensions from the log, and then count the entries to see which extension appears most often. we'll need to use some `awk` and drop these into a new file to parse further. let's do that now.
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 counting the space delimitizations, let's try to isolate columns 12 and 13 to start
@@ -94,7 +94,7 @@ now that we have column 13 cleaned up, let's double-check our work:
 
 looks good. now let's work on getting some totals on these file extensions.
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `grep '\.' cleanfiles.txt > files.txt; rm cleanfiles.txt; head files.txt` (overwriting `files.txt` since it doesn't appear that we need the original anymore)
@@ -113,7 +113,7 @@ now we need to `awk` this with a delimiter of `/` so we can remove the folder pa
 ok now that we're happy with the results, let's drop this into a file to delimit further to isolate the file extensions.
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `awk -F'/' '{print $5}' files.txt > cleanfiles.txt | head cleanfiles.txt`
@@ -139,7 +139,7 @@ etc..
 
 so let's use some pipes, `echo` and and a bash loop to see if we can make the output look nice:
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 first, let's get a unique list of extensions for which we can iterate on with the bash loop:
@@ -159,7 +159,7 @@ final result:
 
 i'm sure there's a way to do all this in a single command, but for now, we have the end result we need, so let's continue with creating our loop. copying the space-delimited file extensions to our clip board, let's make the bash loop:
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `for ext in bak0 chm css DE exe JPG pdf php png txt xml; do echo -n "$ext"; grep "$ext" extensions.txt | wc -l; done'
@@ -180,7 +180,7 @@ so now we can easily answer Question 4.
 Question 5 asks to find another user in the log. in the video, i originally just tried grepping the file to see if we could see any other users in the `/home/user/` file directory list on column 13. this is very messy and you'll be scrolling for days.. so let's go back to the original file and see if we can `awk` and `sort -u` on column 8, which has syntax of `[username]` :
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `awk '{print $8}' vsftpd.log | sort -u`
@@ -196,7 +196,7 @@ Question 5 is good to go!
 On to Question 6: what IP address did this other user log-in from? i bet we can answer this with `grep`:
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `cat vsftpd.log | grep 'jimmy' | grep -i 'login'`
@@ -214,7 +214,7 @@ i arrived at the proper answer, but grepping twice ends up being much cleaner th
 Questions 7: how many total bytes did the other user upload?
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 we know the other user is `jimmy` and we're looking for keyword `upload` so we'll likely need to grep on these two and then `awk` to find the column of bytes. let's do it.
@@ -244,7 +244,7 @@ Question 8: how many total bytes did 'ftpuser' upload?
 this is a similar process to Q7. we just need to replace the other username with 'ftpuser' in our commands. let's do that now:
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `cat vsftpd.log | grep 'ftpuser' | grep -i 'upload' | grep 'bytes' | awk -F',' '{print $3}' | awk '{print $1}' > uploadedbytesbyftpuser.txt; cat uploadedbytesbyftpuser.txt `
@@ -264,7 +264,7 @@ Question 9: how many total bytes did ftpuser download?
 again, very similar set of commands here as with Q7 and Q8.
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 
@@ -282,7 +282,7 @@ Question 10: identify the suspicious IP address.
 
 back to the original file, let's just `grep -i 'login'` (or `grep 'LOGIN'`) and see what we get.
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `cat vsftpd.log | grep 'LOGIN'|sort -u`
@@ -316,7 +316,7 @@ VSFTPD Logs? DONE!
 **BONUS** awk to get just the IP address and drop it into a file:
 
 
-<details>
+<details markdown="1">
   <summary>SPOILER</summary>
 
 `cat vsftpd.log | grep '"10.3.0.6"' | awk '{print $12}' > suspiciousIP.txt; cat suspiciousIP.txt`
