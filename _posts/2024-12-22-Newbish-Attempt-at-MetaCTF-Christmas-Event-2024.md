@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Newbish Attempt At Metactf Christmas Event 2024"
+title: "Newbish Attempt At MetaCTF Christmas Event 2024"
 date: 2024-12-22 12:00:00 -0000
 categories: ctf writeups
 ---
