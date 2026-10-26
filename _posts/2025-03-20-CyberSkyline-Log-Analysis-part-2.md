@@ -23,7 +23,7 @@ we are given an nginx log file `access.log` and are tasked to answer these quest
 
 first, let's download the given file and do some prelim investigation:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 **NOTE:** i renamed the file to `nginxaccess.log` so that it's more specific so i don't accidentally use a different file in the `log-analysis` folder.
@@ -45,7 +45,7 @@ first, let's download the given file and do some prelim investigation:
 
 ok so it's not too big. the first question asks about the number of different IP addresses. let's use `awk` and `sort -u` to see if we can get a unique list of IP's.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -67,7 +67,7 @@ next we need to look for Status 200's. sounds simple enough. let's try to `grep`
 
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep "200" nginxaccess.log > 200s.txt; wc -l 200s.txt`
@@ -80,7 +80,7 @@ Nice again!
 
 the next question is basically the same; this time looking for Status 400:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 we need to adjust the prior command a bit to ensure we're not looking at time zone information, namely the `-0400` as seen here:
@@ -128,7 +128,7 @@ there we go! we finally got it!
 the next question is "What IP address rang at the doorbell?". i have no idea what this means, but thankfully we have the power of `grep`!
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep -i "door" nginxaccess.log`
@@ -148,7 +148,7 @@ ok! we got it! awesome!
 
 let's continue our awesome grepping skills to try to answer the next question:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep -i "googlebot" nginxaccess.logs`
@@ -162,7 +162,7 @@ Nice!
 for this next question, i must admit i am not familiar with the "shellshock" vulnerability, but i'm guessing it's a similar payload to `nc -l 8080 -e /bin/sh`, so let's look for `/bin` and see what we can see:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat nginxaccess.log | grep -i "bin"`
@@ -188,7 +188,7 @@ perfect! exactly what we were hoping to see.
 
 the next question asks about firefox, so let's grep again and see what we get
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep -i "firefox" nginxaccess.log`
@@ -199,7 +199,7 @@ the next question asks about firefox, so let's grep again and see what we get
 
 We have quite a few options to choose from. so let's `awk` again and see if we can isolate that column:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep -i "firefox" nginxaccess.log | awk '{print $18,$19,$20,$21}'`
@@ -215,7 +215,7 @@ the next question asks for the most common HTTP method, aka "HTTP request type".
 so now, (you guessed it!) let's `grep`:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -244,7 +244,7 @@ so now we can easily see which type of request occurs the most, and which is in 
 
 and finally, for the last request, we're just going to `grep` the syntax of characters in the question, being sure to double-backslash b/c `\` is a shell meta character that needs to be escaped:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ** NOTE: ** up until this point, we have been using "" with grep to find specific strings. best practice is to use single quotes ' '. Use double quotes (") when you want Bash to evaluate variables. Use single quotes (') when you want exact text, no variable substitution.
