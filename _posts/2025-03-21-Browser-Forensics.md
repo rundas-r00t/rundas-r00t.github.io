@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Browser Forensics"
+author: "rundas-r00t"
 date: 2025-03-21 12:00:00 -0000
 categories: ctf writeups
 ---
