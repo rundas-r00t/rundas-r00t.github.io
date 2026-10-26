@@ -7,7 +7,7 @@ categories: ctf writeups
 
 # File Forensics
 
-https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html
+[https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html](https://rumble.com/v6qqh7e-rundas-gets-r00t-lets-practice-some-ctfs.html)
 
 worked on some Forensics-based CtF's under chapter "Doctor" through CyberSkyline's gymnasium, of which forensics is not my forte', but i was able to struggle through it.
 
