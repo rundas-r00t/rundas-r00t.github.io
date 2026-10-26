@@ -5,7 +5,7 @@ date: 2024-12-22 12:00:00 -0000
 categories: ctf writeups
 ---
 
-https://compete.metactf.com/392/problems
+[https://compete.metactf.com/392/problems](https://compete.metactf.com/392/problems)
 
 This was a very big challenge for me. I am still very fresh on my journey into cybersecurity, and there is much that i still do not know. On top of this, I was not able to join until there was only an hour remaining in the challenge, so I knew I had everything working against me....Nevertheless, I was able to complete the intro challenge titled "Abashed Confessions", which ended up being an encoded message using the Atbash cipher. a quick copy/paste into ChatGPT translated the message and gave me the flag.
 
