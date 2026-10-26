@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Silver On 'Frosty Keypad' Challenge"
+author: "rundas-r00t"
 date: 2024-12-15 12:00:00 -0000
 categories: ctf writeups
 ---
