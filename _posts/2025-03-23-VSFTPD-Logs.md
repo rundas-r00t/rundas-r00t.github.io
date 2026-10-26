@@ -3,7 +3,7 @@ layout: post
 title: "VSFTPD Logs"
 author: "rundas-r00t"
 date: 2025-03-23 12:00:00 -0000
-categories: "log analysis"
+categories: "log-analysis"
 ---
 
 # VSFTPD Logs
