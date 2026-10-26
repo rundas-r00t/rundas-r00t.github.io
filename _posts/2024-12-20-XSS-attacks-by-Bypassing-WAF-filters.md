@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Xss Attacks By Bypassing Waf Filters"
+title: "XSS Attacks By Bypassing WAF Filters"
 date: 2024-12-20 12:00:00 -0000
 categories: ctf writeups
 ---
