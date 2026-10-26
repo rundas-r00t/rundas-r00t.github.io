@@ -15,7 +15,7 @@ we are give a file `payments.log` and asked these questions three:
 
 
 
-<details>
+<details markdown="1">
   <summary>Spoiler</summary>
 **NOTE:** per the walkthrough, there is a way to parse the XML inside the log file and convert it to a CSV for use with Excel & filters, etc. I did not do this. i don't know which method is inherently "better" or "more correct". overall this challenge took me a couple hours to complete. if i had to do it again without researching the commands, i'm sure my method would be very fast. but if time is essential, it may very well be faster to try to convert the data to csv.
 </details>
@@ -26,7 +26,7 @@ i have never done anything with payment logs before so let's stick to the basics
 first, let's `head -n5 payments.log` and see what we get:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -42,7 +42,7 @@ ok so, at first glance, this is an ebay payment sent via the PayPal API Service.
 Doing a bit of research with ChatGPT, we discover that the transaction information always begins with `\<ns:DoDirectPaymentReq\>`. so let's try to get a count of this phrase, which should answer Question 1:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 you can grep this in a few different ways. i prefer to grep output to a file and then `wc -l` as we've seen in prior write-ups:
@@ -65,7 +65,7 @@ for the next question, we need to isolate the amounts of the transactions , pair
 
 let's do it.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep 'ID' payments.log`
@@ -92,7 +92,7 @@ using ChatGPT for a decent 30 minutes, i was able to iterate through some comman
 
 we're getting close. we have the transaction ID's and the order amounts extracted from the log file. now we just need to figure out how to further reduce it to just the dollar amount and the transaction ID.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `awk -F'[><]' '{print $3,$7}' orders.txt | sort -nr > 2goOrders.txt; head 2goOrders.txt`
@@ -117,7 +117,7 @@ with ChatGPT's help on how to delimit the file, i was able to produce a one-line
 
 now that we have the full transaction list, with only the state abbreviation, we can do a bash loop to iterate through all the states, `wc -l`'ing and seeing the total transaction counts of each state:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `for state in AK AL AR AZ CA CO CT DE FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS MT NC ND NE NH NJ NM NV NY OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY; do echo -n "$state: "; grep "$state" states.txt | wc -l; done > TcountStates.txt; cat TcountStates.txt`
