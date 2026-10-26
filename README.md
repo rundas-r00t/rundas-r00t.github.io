@@ -1,2 +1,3 @@
 # rundas-r00t.github.io
-blog page coming soon
+blog page is up and running
+https://rundas-r00t.github.io/
