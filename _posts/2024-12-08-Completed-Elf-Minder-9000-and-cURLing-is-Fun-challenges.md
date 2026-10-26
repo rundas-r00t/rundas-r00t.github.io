@@ -5,7 +5,7 @@ date: 2024-12-08 12:00:00 -0000
 categories: ctf writeups
 ---
 
-video walkthrough here: https://rumble.com/v5xchyt-rundas-gets-r00t.html
+video walkthrough here: [https://rumble.com/v5xchyt-rundas-gets-r00t.html](https://rumble.com/v5xchyt-rundas-gets-r00t.html)
 
 Finally got the Elf Minder 9000 challenge, using SamanthaCTF's advice from her article on [medium.com](https://samanthactf.medium.com/sans-holiday-hack-2024-prologue-dfa78d984b5c). i had mis-clicked a square and that's why the elf was catapulting back to start instead of hopping to the finish.
 
