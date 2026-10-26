@@ -25,7 +25,7 @@ the major hang-up i had at this stage was for 4:19:3, because on page 4, there i
 eventually, i had to reference SamanthaCtF's guide on [medium.com](https://samanthactf.medium.com/sans-holiday-hack-2024-act-1-5a8c859341d8) which made me realize my mistake about the 19th word. redoing my counts, i realized that the 2 was repeated, and going in order of the post-it note, reveals:
 
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
  72682 (SANTA using phone keypad substitution)
 </details>
