@@ -234,7 +234,7 @@ now we can `wc -l` each file to see which has the most requests (with a bash loo
 
 ![image](https://github.com/user-attachments/assets/bbb5dcd7-a21f-4921-87f4-43f77f319937)
 
-so now we can easily see which type of request occurs the most, and which is in 2nd place, answering quetions 8 and 9.
+so now we can easily see which type of request occurs the most, and, which is in 2nd place, answering questions 8 and 9.
 
 
 
