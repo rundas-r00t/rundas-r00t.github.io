@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sans Holiday Hack Challenge ‐ Frosty Keypad"
+title: "SANS Holiday Hack Challenge: Frosty Keypad"
 date: 2025-01-05 12:00:00 -0000
 categories: ctf writeups
 ---
