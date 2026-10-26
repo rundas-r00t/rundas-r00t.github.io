@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="blog-container" style="display: flex; gap: 30px;">
+  
+  <!-- Left Side: Navigation Sidebar -->
+  <aside style="flex: 1; max-width: 250px; border-right: 1px solid #333; padding-right: 20px;">
+    {% include sidebar-nav.html %}
+  </aside>
+
+  <!-- Right Side: The actual post text -->
+  <main style="flex: 3; min-width: 0;">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">by {{ page.author }} on {{ page.date | date_to_string }}</p>
+    <hr>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </main>
+
+</div>
