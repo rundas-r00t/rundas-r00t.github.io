@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reverse TCP-Relay Pivot"
+author: "rundas-r00t"
 date: 2024-12-27 12:00:00 -0000
 categories: ctf writeups
 ---
