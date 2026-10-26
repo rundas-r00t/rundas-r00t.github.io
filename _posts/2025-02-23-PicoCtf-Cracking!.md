@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Picoctf Cracking!"
+title: "PicoCTF Cracking!"
 date: 2025-02-23 12:00:00 -0000
 categories: ctf writeups
 ---
