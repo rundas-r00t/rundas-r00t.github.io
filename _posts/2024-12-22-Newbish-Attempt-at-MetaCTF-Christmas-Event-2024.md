@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Newbish Attempt At MetaCTF Christmas Event 2024"
+author: "rundas-r00t"
 date: 2024-12-22 12:00:00 -0000
 categories: ctf writeups
 ---
