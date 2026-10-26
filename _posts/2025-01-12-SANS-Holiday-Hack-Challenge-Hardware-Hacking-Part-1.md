@@ -5,7 +5,7 @@ date: 2025-01-12 12:00:00 -0000
 categories: ctf writeups
 ---
 
-video here: https://rumble.com/v68kyw1-sans-holiday-hack-episode-8.html
+video here: [https://rumble.com/v68kyw1-sans-holiday-hack-episode-8.html](https://rumble.com/v68kyw1-sans-holiday-hack-episode-8.html)
 
 This challenge introduces a UART controller, which is a device that translates signals from serial to USB. 
 
