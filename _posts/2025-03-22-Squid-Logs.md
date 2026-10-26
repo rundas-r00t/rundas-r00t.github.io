@@ -3,7 +3,7 @@ layout: post
 title: "Squid Logs"
 author: "rundas-r00t"
 date: 2025-03-22 12:00:00 -0000
-categories: ctf writeups
+categories: "forensics"
 ---
 
 # Squid Log Forensics with `awk`, `grep`, and `sort`
