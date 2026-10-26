@@ -1,0 +1,10 @@
+<div class="sidebar-navigation">
+  <h3>All Entries</h3>
+  <ul>
+    {% for post in site.posts %}
+      <li class="{% if page.url == post.url %}active-post{% endif %}">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
