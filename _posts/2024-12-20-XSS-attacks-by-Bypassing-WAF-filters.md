@@ -3,7 +3,7 @@ layout: post
 title: "XSS Attacks By Bypassing WAF Filters"
 author: "rundas-r00t"
 date: 2024-12-20 12:00:00 -0000
-categories: ctf writeups
+categories: "webapp attacks"
 ---
 
 
