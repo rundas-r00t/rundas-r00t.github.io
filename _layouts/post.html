@@ -2,27 +2,46 @@
 layout: default
 ---
 <style>
-  /* 1. Force the page body to stretch wide and left with clean breathing room */
+  /* 1. Force the container to fill widescreen views cleanly */
   .wrapper, .container, section, body > div {
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 30px !important; /* This adds a perfect 30px safety padding on the far left */
+    padding-left: 30px !important;
     padding-right: 30px !important;
   }
 
-  /* 2. Target the top header block specifically and keep it perfectly centered */
+  /* 2. Strip standard centering rules from the header so we can align it manually */
   header, .site-header, #header, body > header {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 1024px !important; /* Keeps the header bounded so it doesn't stretch to the edges */
-    padding-left: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
   }
 </style>
 
+<script>
+  // This script injects an alignment box into your theme's header block dynamically
+  document.addEventListener("DOMContentLoaded", function() {
+    var headerContent = document.querySelector('header, .site-header, #header, body > header');
+    if (headerContent) {
+      // Wrap existing header contents in a flex system to match our body columns
+      var innerHTML = headerContent.innerHTML;
+      headerContent.innerHTML = `
+        <div style="display: flex; gap: 30px; width: 100%;">
+          <!-- Invisible structural spacer box matching your 250px sidebar exactly -->
+          <div style="flex: 1; max-width: 250px; padding-right: 20px;"></div>
+          <!-- Centered content section -->
+          <div style="flex: 3; min-width: 0; text-align: center; margin-right: 250px;">
+            ${innerHTML}
+          </div>
+        </div>
+      `;
+    }
+  });
+</script>
 
-<div class="blog-container" style="display: flex; gap: 30px;">
+<div class="blog-container" style="display: flex; gap: 30px; margin-top: 20px;">
   
   <!-- Left Side: Navigation Sidebar -->
   <aside style="flex: 1; max-width: 250px; border-right: 1px solid #333; padding-right: 20px;">
