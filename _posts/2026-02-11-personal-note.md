@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Personal Note"
+author: "rundas-r00t"
 date: 2026-02-11 12:00:00 -0000
 categories: ctf writeups
 ---
@@ -9,4 +10,4 @@ been a while since I've blogged. been swept away by life. finished school, got a
 
 hard work + passion + perseverance = success
 
-if you're currently feeling discouraged, please keep going. you know what will happen if you give up; keep going and see what happens. 
+if you're currently feeling discouraged, please keep going. you know what will happen if you give up. so keep going and see what happens. 
