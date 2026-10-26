@@ -5,7 +5,7 @@ date: 2024-12-15 12:00:00 -0000
 categories: ctf writeups
 ---
 
-https://rumble.com/v5zoa0q-sans-holiday-hack-2024-episode-6.html
+[https://rumble.com/v5zoa0q-sans-holiday-hack-2024-episode-6.html](https://rumble.com/v5zoa0q-sans-holiday-hack-2024-episode-6.html)
 
 the challenge presents you with a keypad, a post-it note, and a hint to walk around and find a lost book and a UV flashlight. 
 
