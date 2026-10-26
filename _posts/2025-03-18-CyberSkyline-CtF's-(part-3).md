@@ -11,7 +11,7 @@ from the last entry, we were able to answer 3 of the 6 questions for the "The Bo
 
 from the prior challenge, we've learned:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 *  the type of OS: win_NT
@@ -45,7 +45,7 @@ this will take a few minutes to run, as the file is 1GB. if the file has hundred
 
 now let's go back to grepping through all the files. it is useful to know some basic info prior to doing this. for example, knowing an evil IP or and evil processname definitely helps to save time. since we have neither, let's start with `head` and  `tail` and see what we can see:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ![image](https://github.com/user-attachments/assets/4407953f-6967-498e-9beb-52eb95304ef8)
@@ -56,7 +56,7 @@ now let's go back to grepping through all the files. it is useful to know some b
 basically what we're seeing is all the commandline commands that started the running processes on the machine. the only thing that jumps out to me is `DB Browser for SQLite.exe` , which is good news. let's look at some other files and see if we can find a SQL database somewhere. we don't know which processes are evil just yet, so let's skip the DllList file and move on to the FileScan file. we want to use `cat`, `grep`, and the evil username to narrow down our results: 
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat windows.filescan.FileScan.dump.txt | grep -i "liber8hacker" `
@@ -70,7 +70,7 @@ basically what we're seeing is all the commandline commands that started the run
 
 we have quite a few hits in the AppData folder for the attacker account. a few stand-out files to me are `black_book.db` (the SQL database we were hoping to find), `ntuser.dat.LOG2` , and `ntuser.dat.LOG1`. let's add the `sort -u` to further narrow down the results.
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat windows.filescan.FileScan.dump.txt | grep -i "liber8hacker" | grep -i "desktop" | sort -u`
@@ -87,7 +87,7 @@ we have quite a few hits in the AppData folder for the attacker account. a few s
 
 this is pretty good info, but what i really want to do is to extract that `black_book.db` file and work some SQL magic. to do that, let's `cat` , `grep` and `sort -u` and make note of the memory addresses:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat windows.filescan.FileScan.dump.txt | grep -i "black_book.db" | sort -u`
@@ -102,7 +102,7 @@ this is pretty good info, but what i really want to do is to extract that `black
 
 next, let's do another bash loop with the memory addresses and see what we can extract:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `mkdir output`
@@ -121,7 +121,7 @@ next, let's do another bash loop with the memory addresses and see what we can e
 
 now let's load up one up in `sqlite3` and see what we can see. i've chosen the `SharedCacheMap` file on whim, but my gut (and the file size) says that we can possibly get more info out of this type of file versus the others:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `sqlite3 file.0xe0003d624b90.0xe0003f6d25a0.SharedCacheMap.black_book.db.vacb `
@@ -207,7 +207,7 @@ On to the last question.....
 
 one thing we didn't look at yet with our original `vol` bash loop is password hashes. let's do that now:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 (exit sqlite by pressing ^C)
@@ -227,7 +227,7 @@ as you can see, we need to clean up the file a bit in order to have hashcat proc
 
 `grep "liber" hashes.txt | awk '{print $1 ":" $3 ":" $4}' > crackthis.txt `
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 ![image](https://github.com/user-attachments/assets/58cef7ed-b542-4aad-a4cd-2d576a02fb56)
@@ -238,7 +238,7 @@ as you can see, we need to clean up the file a bit in order to have hashcat proc
 
 since we know this is a Windows_NT machine, hashes come in the form of `user:lanmanhash:NThash`. therefore, it's likely that we're going to use hashcat's NT Hash mode `-m1000`. so now, let's crack:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `hashcat -a0 -m1000 --user crackthis.txt /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule`
@@ -259,7 +259,7 @@ since hashcat doesn't seem to like our file, let's try John. first, let's isolat
 and now let's `john` it:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `john --format=NT --wordlist=/usr/share/wordlists/rockyou.txt 1crack.txt`
