@@ -13,7 +13,7 @@ title: "About Me"
     <p>You can find my live streams, where i work through CtF challenges, on my <a href="https://rumble.com/c/c-6946400" target="_blank">Rumble Channel</a>.</p>
 <br>
     <br>
-    ```text
+    <pre style="color: #00ff00; background: transparent; border: none; font-family: monospace; line-height: 1.2;">
                                                                                                                    
                                                                                                                    
                                                                                                                    
@@ -49,7 +49,8 @@ title: "About Me"
                                                                                                                    
                                                                                                                    
  . ..                                                                                                        ..... 
-    ```
-    
+    </pre>
+      </main>
+</div>
   </main>
 </div>
