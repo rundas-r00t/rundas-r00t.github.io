@@ -19,14 +19,14 @@ dang, it really is that easy.. typing `history` into the console revieals a hist
 
 ![image](https://github.com/user-attachments/assets/4729fec9-525e-4cd1-b8c9-7fcda7b6945a)
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
 11           slh --passcode CandyCaneCrunch77 --set-access 1 --id 143
 </details>
 
 Now that we've found the missing password, we can create the new ID card with a quick one-liner. lets do it:
 
-<details>
+<details markdown="1">
   <summary>Spoiler Alert</summary>
   slh --id 42 --passcode CandyCaneCrunch77 --set-access 1
 </details>
@@ -62,7 +62,7 @@ the access_cards table seems fairly obvious, it's going to house all the cards. 
 
 ![image](https://github.com/user-attachments/assets/a2ee4ec1-63df-45b2-8301-e16833431bdb)
 
-<details>
+<details markdown="1">
 <summary>Spoiler Alert</summary>
 
 1|hmac_secret|9ed1515819dec61fd361d5fdabb57f41ecce1a5fe1fe263b98c0d6943b9b232e
