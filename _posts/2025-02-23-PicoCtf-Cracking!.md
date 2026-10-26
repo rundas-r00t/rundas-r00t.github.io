@@ -7,8 +7,9 @@ categories: ctf writeups
 
 # Password Cracking
 
-https://rumble.com/v6oe7ai-picoctf-episode-2.html
-https://rumble.com/v6oen2u-picoctf-episode-2-part2.html
+[https://rumble.com/v6oe7ai-picoctf-episode-2.html](https://rumble.com/v6oe7ai-picoctf-episode-2.html)
+
+[https://rumble.com/v6oen2u-picoctf-episode-2-part2.html](https://rumble.com/v6oen2u-picoctf-episode-2-part2.html)
 
 after my computer blue-screened and i got the stream back up and running, I went to https://play.picoctf.org/ and looked for some fun Medium-difficulty challenges, and found password cracking challenges PW Crack 3, PW Crack 4, and PW Crack 5. all 3 of these challenges give you a binary file for the hash and an encrypted txt file for the flag, as well as a python script to iterate the password against the flag file. 
 
