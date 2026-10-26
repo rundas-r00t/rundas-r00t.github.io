@@ -13,7 +13,7 @@ title: "About Me"
     <p>You can find my live streams, where i work through CtF challenges, on my <a href="https://rumble.com/c/c-6946400" target="_blank">Rumble Channel</a>.</p>
 <br>
     <br>
-    <pre style="color: #00ff00; background: transparent; border: none; font-family: monospace; line-height: 1.0; font-size: 10px; letter-spacing: -0.5px; overflow-x: hidden;">
+    <pre style="color: #00ff00; background: transparent; border: none; font-family: monospace; line-height: 1.0; font-size: min(1.3vw, 10px); letter-spacing: -0.5px; overflow-x: hidden; white-space: pre;">
                                                                                                                    
                                                                                                                    
                                                                                                                    
