@@ -8,7 +8,7 @@ categories: ctf writeups
 # VSFTPD Logs
 
 
-video walkthrough here: https://rumble.com/v6r2zb2-rundas-gets-r00t-sunday-ctfs.html
+video walkthrough here: [https://rumble.com/v6r2zb2-rundas-gets-r00t-sunday-ctfs.html](https://rumble.com/v6r2zb2-rundas-gets-r00t-sunday-ctfs.html)
 
 
 first let's make a new directory, cd to it, and download the log file:
