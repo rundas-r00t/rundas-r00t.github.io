@@ -3,7 +3,7 @@ layout: post
 title: "Cyberskyline CTF's (Part 3)"
 author: "rundas-r00t"
 date: 2025-03-18 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 # Memory Analysis with Volatility
