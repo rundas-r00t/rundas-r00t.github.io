@@ -41,7 +41,7 @@ so it's not insanely gigantic, which is nice. my current knowledge for parsing l
 luckily, it looks like we can atleast answer the first question by just `cat`'ing the file:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -57,7 +57,7 @@ question 2 is the IP address associated with the first failed password attempt w
 
 we can easily see these iterations by first `awk`'ing columns 6 through 14 into it's own file (stripping the timestamps) and then grepping for `"Failed password"` and piping to `sort -u` to get a unique list
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `awk '{print $6,$7,$8,$9,$10,$11,$12,$13,$14}' auth.log | grep -i "failed" > failures.txt `
@@ -71,7 +71,7 @@ we can easily see these iterations by first `awk`'ing columns 6 through 14 into 
 
 now that we've stripped the timestamps, we can `sort -u` to get a list of unique IP addresses that are attempting to connect:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat failures.txt | sort -u`
@@ -89,7 +89,7 @@ now we can easily answer questions 2, 3, and 4.
 
 for Question 5, this should be obvious as it's the username associated with the failed password attempts:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat auth.log | grep "Failed password"`
@@ -105,7 +105,7 @@ The final question asks for the successful log-in attempt. so let's do a reverse
 
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `cat auth.log | grep -v "Failed password"| grep -v "Received disconnect"|grep -v "Connection"` 
