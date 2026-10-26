@@ -20,7 +20,7 @@ we are given a `squid_access.log` squid proxy log file and are asked the followi
 
 just for my own sanity, and to easily answer some of the date/time related questions, let's convert all the timestamps from Epoch time to regular timestamps:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `awk '{ cmd="date -d @"$1" \"+%Y-%m-%d %H:%M:%S\""; cmd | getline date; close(cmd); print date, $0 }' squid_access.log > new.log`
@@ -56,7 +56,7 @@ with each column being space delimited. again, that's:
 
 To answer Question 2, we need to isolate column 2 in the original log file (the one that's properly space-delimited) using `awk`, and then `sort -n` to "sort by **n**umber smallest to largest". 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `awk '{print $2}' squid_access.log | sort -n | head -1`
@@ -70,7 +70,7 @@ To answer Question 2, we need to isolate column 2 in the original log file (the 
 to get the next question, we do a similar statement, but use `sort -nr` instead ("sort by **n**umber smallest to largest, but in **r**everse)
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `awk '{print $2}' squid_access.log | sort -nr | head -1`
@@ -82,7 +82,7 @@ to get the next question, we do a similar statement, but use `sort -nr` instead 
 
 for this next question, we're going to `awk` again, `sort -u` to grab unique IP addresses, and then `wc -l` to grab a total number of unique IPs:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -95,7 +95,7 @@ for this next question, we're going to `awk` again, `sort -u` to grab unique IP 
 Easy enough. For the Question 5, let's continue `awk`ing, this time isolating column 6 (HTTP_method), and then grepping with `wc -l` to find the specifics:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -116,7 +116,7 @@ and again but for POST for Question 6:
 
 for Question 7, i honestly have no idea how to find this, so let's just `grep` for it and see if we get lucky:
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 
@@ -135,7 +135,7 @@ Making good progress. `awk` and `grep` are our friends when parsing through squi
 On to the last question. we already have the answer on our screen, we just need a keen eye once more. updates are files that get unpacked and installed. so using the above command again, but adding `zip`, we can further isolate and be sure to copy/paste the proper information:
 
 
-<details>
+<details markdown="1">
   <summary>Click to reveal</summary>
 
 `grep '192.168.0.224' squid_access.log  | grep 'zip'`
