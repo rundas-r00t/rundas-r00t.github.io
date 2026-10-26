@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vsftpd Logs"
+title: "VSFTPD Logs"
 date: 2025-03-23 12:00:00 -0000
 categories: ctf writeups
 ---
