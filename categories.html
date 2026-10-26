@@ -10,9 +10,14 @@ title: "Categories"
     <h1>Categories</h1>
     <hr style="border-color: #333;">
 
-    {% for category in site.categories %}
+    <!-- 1. Sort the categories alphabetically by their name -->
+    {% assign sorted_categories = site.categories | sort %}
+
+    {% for category in sorted_categories %}
+      <!-- 2. The first item in the sorted array is the category name -->
       <h3 style="color: #00ff00; margin-top: 20px;">📁 {{ category[0] | upcase }}</h3>
       <ul style="list-style: square; padding-left: 20px;">
+        <!-- 3. The second item contains the posts inside that category -->
         {% for post in category[1] %}
           <li style="margin-bottom: 5px;">
             <a href="{{ post.url }}">{{ post.title }}</a> — <span style="color: #666; font-size: 0.9em;">{{ post.date | date_to_string }}</span>
