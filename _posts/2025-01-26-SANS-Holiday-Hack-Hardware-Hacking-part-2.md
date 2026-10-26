@@ -3,7 +3,7 @@ layout: post
 title: "SANS Holiday Hack Challenge: Hardware Hacking Part 2"
 author: "rundas-r00t"
 date: 2025-01-26 12:00:00 -0000
-categories: "ctf writeups"
+categories: "ctf-writeups"
 ---
 
 [https://rumble.com/v6dsals-sans-holiday-hack-2024-episode-9.html](https://rumble.com/v6dsals-sans-holiday-hack-2024-episode-9.html) and Episode 10.
